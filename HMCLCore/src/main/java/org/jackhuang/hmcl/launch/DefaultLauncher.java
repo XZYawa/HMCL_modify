@@ -473,9 +473,6 @@ public class DefaultLauncher extends Launcher {
             decompressNatives(nativeFolder);
         }
 
-        if (isUsingLog4j())
-            extractLog4jConfigurationFile();
-
         File runDirectory = repository.getRunDirectory(version.getId());
 
         if (StringUtils.isNotBlank(options.getPreLaunchCommand())) {
@@ -577,9 +574,6 @@ public class DefaultLauncher extends Launcher {
         if (options.getNativesDirType() == NativesDirectoryType.VERSION_FOLDER) {
             decompressNatives(nativeFolder);
         }
-
-        if (isUsingLog4j())
-            extractLog4jConfigurationFile();
 
         String scriptExtension = FileUtils.getExtension(scriptFile);
         boolean usePowerShell = "ps1".equals(scriptExtension);
