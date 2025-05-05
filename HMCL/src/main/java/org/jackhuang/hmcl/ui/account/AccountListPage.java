@@ -60,7 +60,7 @@ import static org.jackhuang.hmcl.util.i18n.I18n.i18n;
 import static org.jackhuang.hmcl.util.javafx.ExtendedProperties.createSelectedItemPropertyFor;
 
 public final class AccountListPage extends DecoratorAnimatedPage implements DecoratorPage {
-    static final BooleanProperty RESTRICTED = new SimpleBooleanProperty(true);
+    static final BooleanProperty RESTRICTED = new SimpleBooleanProperty(false);
 
     private static boolean isExemptedRegion() {
         if ("Asia/Shanghai".equals(ZoneId.systemDefault().getId()))
