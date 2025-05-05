@@ -59,7 +59,7 @@ public final class Metadata {
     public static final Path DEPENDENCIES_DIRECTORY;
 
     static {
-        String hmclHome = System.getProperty("hmcl.home");
+        String hmclHome = System.getProperty("hmcl.home","./hmcl");
         if (hmclHome == null) {
             if (OperatingSystem.CURRENT_OS.isLinuxOrBSD()) {
                 String xdgData = System.getenv("XDG_DATA_HOME");
